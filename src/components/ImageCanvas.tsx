@@ -1,4 +1,3 @@
-// src/components/ImageCanvas.tsx
 import React, { useRef, useEffect } from "react";
 
 export interface Point {
@@ -20,7 +19,7 @@ const ImageCanvas: React.FC<ImageCanvasProps> = ({ points, setPoints }) => {
     if (!ctx) return;
 
     const img = new Image();
-    img.src = "/homeRoofImage.webp"; // Replace with your image URL
+    img.src = "/homeRoofImage.webp";
 
     img.onload = () => {
       canvas && ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -43,7 +42,7 @@ const ImageCanvas: React.FC<ImageCanvasProps> = ({ points, setPoints }) => {
     if (!context) return;
 
     const img = new Image();
-    img.src = "/homeRoofImage.webp"; // Replace with your image URL
+    img.src = "/homeRoofImage.webp";
 
     img.onload = () => {
       canvas && context.clearRect(0, 0, canvas.width, canvas.height);
@@ -59,8 +58,8 @@ const ImageCanvas: React.FC<ImageCanvasProps> = ({ points, setPoints }) => {
     <canvas
       ref={canvasRef}
       width={800}
-      height={600}
-      className="border"
+      height={480}
+      className="border rounded-lg"
       onClick={handleCanvasClick}
     />
   );
