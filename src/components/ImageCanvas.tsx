@@ -58,7 +58,7 @@ const ImageCanvas: React.FC<ImageCanvasProps> = ({ points, setPoints }) => {
     <canvas
       ref={canvasRef}
       width={800}
-      height={480}
+      height={450}
       className="border rounded-lg"
       onClick={handleCanvasClick}
     />
